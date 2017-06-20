@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<html>
+<head>
+	<title>AOViewJS</title>
+	<style>
+		body { background-color: #000; color: #FFF; position: relative; }
+		a { color: #999; text-decoration: none; }
+		a:hover { color: #fff; }
+		.content { margin: 150px auto 0 auto; width: 640px; height: 480px; }
+		.content canvas {
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px; }
+		.instructions {
+            display: block;
+			text-align: center; }
+		footer {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+		}
+		.container { position: relative; }
+		#gfx { position: absolute; left: 0; top: 0; } 
+		#hud { position: absolute; left: 0; top: 0; z-index: 999; }
+        #dbg { text-align: center; width: 100%; color: #1a1a1a; }
+        #dbg:hover { color: #FFF; }
+		#anims {
+			margin-left: 4px;
+			text-align: center;
+			width: 100px;
+			background-color: #000;
+			color: #fff;
+			border: 1px solid #ccc;
+		   -webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+		   border-radius: 5px;
+		}
+		.disclaimer {
+            display: block;
+			text-align: center;
+			margin: auto;
+			max-width: 480px; }
+	</style>
+</head>
+<body>
+<header></header>
+<div class="content">
+	<div id="canvas" class="container">
+		<canvas id="gfx" width="640" height="480"></canvas>
+		<canvas id="hud" width="640" height="480"></canvas>
+	</div>
+</div>
+<span class="instructions">
+	Get the game <a id="plug" href="http://www.anarchy-online.com/">here</a> or on
+	<a href="http://store.steampowered.com/app/396280/Anarchy_Online/">Steam.</a>
+	<span>
+	[<a href="javascript:;" id="ui_atrox">A</a>
+	<a href="javascript:;" id="ui_solif">Sf</a>
+	<a href="javascript:;" id="ui_solim">Sm</a>
+	<a href="javascript:;" id="ui_opif">Of</a>
+	<a href="javascript:;" id="ui_opim">Om</a>
+	<a href="javascript:;" id="ui_nanof">Nf</a>
+	<a href="javascript:;" id="ui_nanom">Nm</a>] 
+	[<a href="javascript:;" id="ui_sm">S</a>
+	<a href="javascript:;" id="ui_me">M</a>
+	<a href="javascript:;" id="ui_lg">L</a>]
+	[<a href="javascript:;" id="ui_dn">-</a>
+	<a href="javascript:;" id="ui_up">+</a>]
+	<a href="javascript:;" id="ui_prev">&lt;&lt;</a>
+	<a href="javascript:;" id="ui_next">&gt;&gt;</a>
+	</span>
+	<select id="anims" class="anims"></select>
+</span>
+<dl class="instructions">
+    <dd><b>Controls</b></dd>
+    <dd>Left mouse: rotate</dd>
+	<dd>Right mouse: zoom</dd>
+    <dd>Left + right mouse: pan camera</dd>
+	<dd>Shift + mouse: rotate light</dd>
+</dl>
+<p class="disclaimer">This tool is unofficial and released as is, without 
+guarantees nor warranty. We're not affiliated with Funcom either, so direct 
+your comments <a href="https://github.com/TeamRaging">elsewhere.</a></p>
+<p id="dbg"></p>
+</body>
+<script src="lib.js"></script>
+<!--GREETS to all our friends in Synergy Factor, Ancarim Iron Legion, S.I.N.C., 
+Storm, Komodo, Infinity, Legion, PEACE $ LOVE and anyone else who was cool to 
+us over all these years. SPECIAL THANKS to Funcom for keeping the lights on, 
+and for making it all happen in the first place!
+
+Maybe one day we can have even nicer models to view here?
+
+Raging since the BBS daze...
+Team Raging-->
+</html>
